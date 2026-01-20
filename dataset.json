@@ -1,0 +1,44 @@
+{
+  "faq": [
+    {
+      "question": "what is this newsletter",
+      "answer": "This newsletter provides regular updates on AI, cybersecurity, and digital forensics projects."
+    },
+    {
+      "question": "what is this newsletter about",
+      "answer": "This newsletter focuses on AI-based projects, technology updates, and research progress."
+    },
+    {
+      "question": "how often will i get emails",
+      "answer": "You will receive one newsletter email every week."
+    },
+    {
+      "question": "is this newsletter free",
+      "answer": "Yes, this newsletter is completely free of cost."
+    },
+    {
+      "question": "what kind of updates will i receive",
+      "answer": "You will receive updates related to AI tools, project development, and tech news."
+    },
+    {
+      "question": "who can subscribe",
+      "answer": "Anyone interested in AI, technology, and research can subscribe to this newsletter."
+    },
+    {
+      "question": "how can i subscribe",
+      "answer": "You can subscribe by sharing your email address in the chat."
+    },
+    {
+      "question": "can i unsubscribe",
+      "answer": "Yes, you can unsubscribe anytime by contacting the support team."
+    },
+    {
+      "question": "is my email safe",
+      "answer": "Yes, your email is stored securely and used only for sending newsletter updates."
+    },
+    {
+      "question": "latest update",
+      "answer": "The latest update is that the AI-based detection system is currently under testing."
+    }
+  ]
+}
