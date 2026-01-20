@@ -1,3 +1,4 @@
 chat_logs.txt
 subscribers.txt
 _pycache_
+.env
