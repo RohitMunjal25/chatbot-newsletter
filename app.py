@@ -74,3 +74,6 @@ def admin():
         subscribers=subscribers,
         chat_logs=chat_logs
     )
+@app.route('/favicon.ico')
+def favicon():
+    return '', 204
