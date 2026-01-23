@@ -55,6 +55,9 @@ if __name__ == "__main__":
 
 @app.route("/admin")
 def admin():
+    if request.args.get("key") != "admin123":
+        abort(403)
+
     conn = get_connection()
     cur = conn.cursor()
 
@@ -71,8 +74,3 @@ def admin():
         subscribers=subscribers,
         chat_logs=chat_logs
     )
-
-@app.route("/admin")
-def admin():
-    if request.args.get("key") != "admin123":
-        abort(403)
