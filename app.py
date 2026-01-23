@@ -3,6 +3,9 @@ from flask_cors import CORS
 from chatbot import find_answer
 from db import get_connection
 import os
+from flask import render_template
+from flask import request, abort
+
 
 app = Flask(__name__)
 CORS(app)
@@ -14,13 +17,12 @@ def chat():
     conn = get_connection()
     cur = conn.cursor()
 
-    # save user message
+    
     cur.execute(
         "INSERT INTO chat_logs (sender, message) VALUES (?, ?)",
         ("user", user_msg)
     )
 
-    # email detection
     if "@" in user_msg and "." in user_msg:
         try:
             cur.execute(
@@ -36,7 +38,6 @@ def chat():
     if reply is None:
         reply = "Thanks for your message."
 
-    # save bot reply
     cur.execute(
         "INSERT INTO chat_logs (sender, message) VALUES (?, ?)",
         ("bot", reply)
@@ -51,3 +52,27 @@ def chat():
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 5000))
     app.run(host="0.0.0.0", port=port)
+
+@app.route("/admin")
+def admin():
+    conn = get_connection()
+    cur = conn.cursor()
+
+    cur.execute("SELECT * FROM subscribers ORDER BY created_at DESC")
+    subscribers = cur.fetchall()
+
+    cur.execute("SELECT * FROM chat_logs ORDER BY created_at DESC LIMIT 100")
+    chat_logs = cur.fetchall()
+
+    conn.close()
+
+    return render_template(
+        "admin.html",
+        subscribers=subscribers,
+        chat_logs=chat_logs
+    )
+
+@app.route("/admin")
+def admin():
+    if request.args.get("key") != "admin123":
+        abort(403)

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Admin Panel</title>
+  <style>
+    body { font-family: Arial; padding: 20px; background: #f7f7f7; }
+    h2 { margin-top: 40px; }
+    table { width: 100%; border-collapse: collapse; background: #fff; }
+    th, td { padding: 10px; border: 1px solid #ddd; }
+    th { background: #333; color: #fff; }
+  </style>
+</head>
+<body>
+
+<h1> Admin Panel</h1>
+
+<h2>Subscribers</h2>
+<table>
+  <tr>
+    <th>ID</th>
+    <th>Email</th>
+    <th>Subscribed At</th>
+  </tr>
+  {% for s in subscribers %}
+  <tr>
+    <td>{{ s.id }}</td>
+    <td>{{ s.email }}</td>
+    <td>{{ s.created_at }}</td>
+  </tr>
+  {% endfor %}
+</table>
+
+<h2>💬 Chat Logs</h2>
+<table>
+  <tr>
+    <th>ID</th>
+    <th>Sender</th>
+    <th>Message</th>
+    <th>Time</th>
+  </tr>
+  {% for c in chat_logs %}
+  <tr>
+    <td>{{ c.id }}</td>
+    <td>{{ c.sender }}</td>
+    <td>{{ c.message }}</td>
+    <td>{{ c.created_at }}</td>
+  </tr>
+  {% endfor %}
+</table>
+
+</body>
+</html>
