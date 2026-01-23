@@ -1,11 +1,8 @@
-from flask import Flask, request, jsonify
+from flask import Flask, request, jsonify, render_template, abort
 from flask_cors import CORS
 from chatbot import find_answer
 from db import get_connection
 import os
-from flask import render_template
-from flask import request, abort
-
 
 app = Flask(__name__)
 CORS(app)
@@ -17,7 +14,6 @@ def chat():
     conn = get_connection()
     cur = conn.cursor()
 
-    
     cur.execute(
         "INSERT INTO chat_logs (sender, message) VALUES (?, ?)",
         ("user", user_msg)
@@ -48,12 +44,7 @@ def chat():
 
     return jsonify({"reply": reply})
 
-
-if __name__ == "__main__":
-    port = int(os.environ.get("PORT", 5000))
-    app.run(host="0.0.0.0", port=port)
-
-@app.route("/admin")
+@app.route("/admin", methods=["GET"])
 def admin():
     if request.args.get("key") != "admin123":
         abort(403)
@@ -74,6 +65,9 @@ def admin():
         subscribers=subscribers,
         chat_logs=chat_logs
     )
-@app.route('/favicon.ico')
-def favicon():
-    return '', 204
+
+
+
+if __name__ == "__main__":
+    port = int(os.environ.get("PORT", 5000))
+    app.run(host="0.0.0.0", port=port)
