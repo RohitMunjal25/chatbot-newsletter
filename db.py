@@ -1,10 +1,8 @@
-import os
-from pymongo import MongoClient
+import sqlite3
 
-MONGO_URI = os.getenv("MONGO_URI")
+DB_NAME = "newsletter.db"
 
-client = MongoClient(MONGO_URI)   
-
-db = client["newsletterDB"]       
-subscribers_col = db["subscribers"]
-chatlogs_col = db["chat_log"]
+def get_connection():
+    conn = sqlite3.connect(DB_NAME)
+    conn.row_factory = sqlite3.Row
+    return conn

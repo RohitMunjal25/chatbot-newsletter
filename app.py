@@ -1,8 +1,7 @@
 from flask import Flask, request, jsonify
 from flask_cors import CORS
 from chatbot import find_answer
-from db import subscribers_col, chatlogs_col
-import datetime
+from db import get_connection
 import os
 
 app = Flask(__name__)
@@ -12,30 +11,39 @@ CORS(app)
 def chat():
     user_msg = request.json.get("message", "")
 
-    
-    chatlogs_col.insert_one({
-        "sender": "user",
-        "message": user_msg,
-        "time": datetime.datetime.utcnow()
-    })
+    conn = get_connection()
+    cur = conn.cursor()
 
+    # save user message
+    cur.execute(
+        "INSERT INTO chat_logs (sender, message) VALUES (?, ?)",
+        ("user", user_msg)
+    )
+
+    # email detection
     if "@" in user_msg and "." in user_msg:
-        subscribers_col.insert_one({
-            "email": user_msg,
-            "subscribed_at": datetime.datetime.utcnow()
-        })
-        reply = "You are subscribed to the newsletter!"
+        try:
+            cur.execute(
+                "INSERT INTO subscribers (email) VALUES (?)",
+                (user_msg,)
+            )
+            reply = "You are subscribed to the newsletter!"
+        except:
+            reply = "This email is already subscribed."
     else:
         reply = find_answer(user_msg)
 
     if reply is None:
         reply = "Thanks for your message."
 
-    chatlogs_col.insert_one({
-        "sender": "bot",
-        "message": reply,
-        "time": datetime.datetime.utcnow()
-    })
+    # save bot reply
+    cur.execute(
+        "INSERT INTO chat_logs (sender, message) VALUES (?, ?)",
+        ("bot", reply)
+    )
+
+    conn.commit()
+    conn.close()
 
     return jsonify({"reply": reply})
 
