@@ -65,7 +65,9 @@ def admin():
         subscribers=subscribers,
         chat_logs=chat_logs
     )
-
+    @app.route("/health", methods=["GET"])
+def health():
+    return jsonify({"status": "alive"})
 
 
 if __name__ == "__main__":
