@@ -44,6 +44,7 @@ def chat():
 
     return jsonify({"reply": reply})
 
+
 @app.route("/admin", methods=["GET"])
 def admin():
     if request.args.get("key") != "admin123":
@@ -65,7 +66,8 @@ def admin():
         subscribers=subscribers,
         chat_logs=chat_logs
     )
-    @app.route("/health", methods=["GET"])
+
+@app.route("/health", methods=["GET"])
 def health():
     return jsonify({"status": "alive"})
 
