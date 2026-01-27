@@ -39,6 +39,10 @@
     {
       "question": "latest update",
       "answer": "The latest update is that the AI-based detection system is currently under testing."
-    }
+    },
+    {
+      "question":"download free newsletter",
+      "answer":"download your pdf here : /download/pdf"   
+     }
   ]
 }
