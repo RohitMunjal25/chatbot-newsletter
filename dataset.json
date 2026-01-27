@@ -42,7 +42,7 @@
     },
     {
       "question":"download free newsletter",
-      "answer":"download your pdf here : <a href='/download/pdf' target='_blank'>Download Pdf</a>"   
+      "answer":"download your pdf here : <a href='https://chatbot-newsletter.onrender.com/download/pdf' target='_blank'>Download Pdf</a>"   
      }
   ]
 }
