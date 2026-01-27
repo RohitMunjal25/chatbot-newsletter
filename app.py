@@ -69,13 +69,6 @@ def admin():
 @app.route("/health", methods=["GET", "POST"])
 def health():
     return jsonify({"status": "alive"})
-@app.route("/download/pdf")
-def download_pdf():
-    return send_from_directory(
-        directory="data",
-        path="DIP Lab Manual-2.pdf",
-        as_attachment=True
-        )
 
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 5000))
