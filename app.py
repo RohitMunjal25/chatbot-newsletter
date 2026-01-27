@@ -74,7 +74,7 @@ def download_pdf():
     return send_from_directory(
         directory="data",
         path="DIP Lab Manual-2.pdf",
-        as_attachment=true
+        as_attachment=True
         )
 
 if __name__ == "__main__":
