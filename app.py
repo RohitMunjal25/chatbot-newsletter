@@ -46,12 +46,14 @@ def chat():
 
     conn.commit()
     conn.close()
-
     if isinstance(reply,dict):
-        return jsonify({"reply": reply.get("image") or reply.get("text")})
-
+        return jsonify({
+            "reply":{
+                "text":reply.get("text"),
+                "image":reply.get("image")
+            }
+        })
     return jsonify({"reply":reply})
-
 @app.route("/admin", methods=["GET"])
 def admin():
     if request.args.get("key") != "admin123":
