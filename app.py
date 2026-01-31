@@ -3,6 +3,7 @@ from flask_cors import CORS
 from chatbot import find_answer
 from db import get_connection
 import os
+import json
 
 app = Flask(__name__)
 CORS(app)
@@ -33,17 +34,23 @@ def chat():
 
     if reply is None:
         reply = "Thanks for your message."
+    
+    reply_to_save=reply
+    if isinstance(reply,dict):
+        reply_to_save=json.dumps(reply)
 
     cur.execute(
         "INSERT INTO chat_logs (sender, message) VALUES (?, ?)",
-        ("bot", reply)
+        ("bot", reply_to_save)
     )
 
     conn.commit()
     conn.close()
 
-    return jsonify({"reply": reply})
+    if isinstance(reply,dict):
+        return jsonify({"reply": reply.get("image") or reply.get("text")})
 
+    return jsonify({"reply":reply})
 
 @app.route("/admin", methods=["GET"])
 def admin():
