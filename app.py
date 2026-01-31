@@ -19,18 +19,7 @@ def chat():
         "INSERT INTO chat_logs (sender, message) VALUES (?, ?)",
         ("user", user_msg)
     )
-
-    if "@" in user_msg and "." in user_msg:
-        try:
-            cur.execute(
-                "INSERT INTO subscribers (email) VALUES (?)",
-                (user_msg,)
-            )
-            reply = "You are subscribed to the newsletter!"
-        except:
-            reply = "This email is already subscribed."
-    else:
-        reply = find_answer(user_msg)
+    reply=find_answer(user_msg)
 
     if reply is None:
         reply = "Thanks for your message."
@@ -62,7 +51,8 @@ def admin():
     conn = get_connection()
     cur = conn.cursor()
 
-    cur.execute("SELECT * FROM subscribers ORDER BY created_at DESC")
+    cur.execute("SELECT * FROM subscribers ORDER BY subscribed_at DESC")
+
     subscribers = cur.fetchall()
 
     cur.execute("SELECT * FROM chat_logs ORDER BY created_at DESC LIMIT 100")
@@ -78,6 +68,28 @@ def admin():
 @app.route("/health", methods=["GET", "POST"])
 def health():
     return jsonify({"status": "alive"})
+@app.route("/api/subscribe", methods=["POST"])
+def subscribe():
+    email = request.json.get("email")
+
+    if not email or "@" not in email:
+        return jsonify({"status": "error", "message": "Invalid email"}), 400
+
+    conn = get_connection()
+    cur = conn.cursor()
+
+    try:
+        cur.execute(
+            "INSERT INTO subscribers (email) VALUES (?)",
+            (email,)
+        )
+        conn.commit()
+        return jsonify({"status": "success"})
+    except:
+        return jsonify({"status": "exists"})
+    finally:
+        conn.close()
+
 
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 5000))
