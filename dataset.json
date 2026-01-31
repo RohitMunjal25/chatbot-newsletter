@@ -43,6 +43,13 @@
     {
       "question":"download free newsletter",
       "answer":"download your pdf here : <a href='https://raw.githubusercontent.com/RohitMunjal25/chatbot-newsletter/main/data/DIP%20Lab%20Manual-2.pdf' target='_blank'>Download Pdf</a>"   
+     },
+     {
+      "question":"seminar",
+      "answer":{
+        "text":"Here are the images of seminar and workshops",
+        "image":"https://raw.githubusercontent.com/RohitMunjal25/college-newsletter/main/images/stars.jpg"
+      }
      }
   ]
 }
