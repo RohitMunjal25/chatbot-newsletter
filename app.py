@@ -51,11 +51,10 @@ def admin():
     conn = get_connection()
     cur = conn.cursor()
 
-    cur.execute("SELECT * FROM subscribers ORDER BY subscribed_at DESC")
-
+    cur.execute("SELECT * FROM subscribers ORDER BY id DESC")
     subscribers = cur.fetchall()
 
-    cur.execute("SELECT * FROM chat_logs ORDER BY created_at DESC LIMIT 100")
+    cur.execute("SELECT * FROM chat_logs ORDER BY id DESC LIMIT 100")
     chat_logs = cur.fetchall()
 
     conn.close()
@@ -65,6 +64,7 @@ def admin():
         subscribers=subscribers,
         chat_logs=chat_logs
     )
+
 @app.route("/health", methods=["GET", "POST"])
 def health():
     return jsonify({"status": "alive"})
