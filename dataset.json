@@ -50,6 +50,14 @@
         "text":"the images of seminar and workshops",
         "image":"https://res.cloudinary.com/dlwcdmg26/image/upload/v1769837052/ChatGPT_Image_Jan_7_2026_01_50_42_PM_upqo3h.png"
       }
+     },
+     {
+      "question":"sample image",
+      "answer":{
+        "text":"sample video",
+        "image":"https://www.youtube.com/embed/Ly72G5N-G9c?si=IHdWxsIRKi0Cy1yJ"
+      }
      }
+
   ]
 }
