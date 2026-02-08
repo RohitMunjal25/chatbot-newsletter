@@ -39,7 +39,8 @@ def chat():
         return jsonify({
             "reply":{
                 "text":reply.get("text"),
-                "image":reply.get("image")
+                "image":reply.get("image"),
+                "video":reply.get("video")
             }
         })
     return jsonify({"reply":reply})
