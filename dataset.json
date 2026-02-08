@@ -52,10 +52,10 @@
       }
      },
      {
-      "question":"sample image",
+      "question":"sample video",
       "answer":{
         "text":"sample video",
-        "image":"https://www.youtube.com/embed/Ly72G5N-G9c?si=IHdWxsIRKi0Cy1yJ"
+        "video":"https://www.youtube.com/embed/Ly72G5N-G9c?si=IHdWxsIRKi0Cy1yJ"
       }
      }
 
