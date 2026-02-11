@@ -1,63 +1,78 @@
 {
-  "faq": [
+  "faq":[
     {
-      "question": "what is this newsletter",
-      "answer": "This newsletter provides regular updates on AI, cybersecurity, and digital forensics projects."
+      "question": "Download Free Newsletter",
+      "answer": "You can Download the newsletter from '<a href=\"https://www.canva.com/design/DAG9t4H8OxQ/qPQvsvy513oFp1oG61Dmpg/edit\">Click Here</a>"
     },
     {
-      "question": "what is this newsletter about",
-      "answer": "This newsletter focuses on AI-based projects, technology updates, and research progress."
-    },
-    {
-      "question": "how often will i get emails",
-      "answer": "You will receive one newsletter email every week."
-    },
-    {
-      "question": "is this newsletter free",
-      "answer": "Yes, this newsletter is completely free of cost."
-    },
-    {
-      "question": "what kind of updates will i receive",
-      "answer": "You will receive updates related to AI tools, project development, and tech news."
-    },
-    {
-      "question": "who can subscribe",
-      "answer": "Anyone interested in AI, technology, and research can subscribe to this newsletter."
-    },
-    {
-      "question": "how can i subscribe",
-      "answer": "You can subscribe by sharing your email address in the chat."
-    },
-    {
-      "question": "can i unsubscribe",
-      "answer": "Yes, you can unsubscribe anytime by contacting the support team."
-    },
-    {
-      "question": "is my email safe",
-      "answer": "Yes, your email is stored securely and used only for sending newsletter updates."
-    },
-    {
-      "question": "latest update",
-      "answer": "The latest update is that the AI-based detection system is currently under testing."
-    },
-    {
-      "question":"download free newsletter",
-      "answer":"download your pdf here : <a href='https://raw.githubusercontent.com/RohitMunjal25/chatbot-newsletter/main/data/DIP%20Lab%20Manual-2.pdf' target='_blank'>Download Pdf</a>"   
-     },
-     {
-      "question":"seminar",
+      "question":"About College",
       "answer":{
-        "text":"the images of seminar and workshops",
-        "image":"https://res.cloudinary.com/dlwcdmg26/image/upload/v1769837052/ChatGPT_Image_Jan_7_2026_01_50_42_PM_upqo3h.png"
-      }
-     },
-     {
-      "question":"sample video",
-      "answer":{
-        "text":"sample video",
-        "video":"https://www.youtube.com/embed/Ly72G5N-G9c?si=IHdWxsIRKi0Cy1yJ"
-      }
-     }
-
+        "text":"" ,
+        "video": ""
+    }
+  },
+  {
+    "question":"About Department",
+    "answer":{
+      "text":"",
+      "video":""
+    }
+  },
+  {
+    "question":"Editorial team",
+    "answer": {
+      "text":"",
+      "image":""
+    }  
+  },
+  {
+    "question":"Seminar & Workshops",
+    "answer":{
+      "text":"",
+      "video":"https://www.youtube.com/embed/3C0FWW70yQo"
+    }
+  },
+  {
+    "question":"Hackathon Curricular Activities",
+    "answer":{
+      "text":"",
+      "image":""
+    }
+  },
+  {
+    "question":"Department Activities",
+    "answer":{
+      "text":"",
+      "video":""
+    }
+  },
+  {
+    "question":"Placement Activities",
+    "answer":{
+      "text":"",
+      "video":""
+    }
+  },
+  {
+    "question":"Extra Curricular Activities",
+    "answer":{
+      "text":"",
+      "image":""
+    }
+  },
+  {
+    "question":"Testimonials",
+    "answer":{
+      "text":"",
+      "image":""
+    }
+  },
+  {
+    "question":"Glimps & Future Action Plans",
+    "answer":{
+      "text":"",
+      "image":""
+    }
+  }
   ]
 }
