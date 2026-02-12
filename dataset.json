@@ -2,7 +2,10 @@
   "faq":[
     {
       "question": "Download Free Newsletter",
-      "answer": "You can Download the newsletter from '<a href=\"https://github.com/RohitMunjal25/college-newsletter/releases/download/v1.0/IMPETUS-2026.pdf\">Click Here</a>"
+      "answer": {
+        "text":"To download newsletter click below:",
+        "link":"https://github.com/RohitMunjal25/college-newsletter/releases/download/v1.0/IMPETUS-2026.pdf"
+      }
     },
     {
       "question":"About College",
