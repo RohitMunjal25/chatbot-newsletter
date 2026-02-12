@@ -9,7 +9,7 @@ def find_answer(user_msg):
     for item in DATA:
         question = item["question"].strip().lower()
 
-        if question == user_msg:
+        if user_msg in question or question in user_msg:
             return item["answer"]
 
     return None
