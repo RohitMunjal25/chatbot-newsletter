@@ -2,76 +2,76 @@
   "faq":[
     {
       "question": "Download Free Newsletter",
-      "answer": "You can Download the newsletter from '<a href=\"https://www.canva.com/design/DAG9t4H8OxQ/qPQvsvy513oFp1oG61Dmpg/edit\">Click Here</a>"
+      "answer": "You can Download the newsletter from '<a href=\"https://github.com/RohitMunjal25/college-newsletter/releases/download/v1.0/IMPETUS-2026.pdf\">Click Here</a>"
     },
     {
       "question":"About College",
       "answer":{
-        "text":"" ,
-        "video": ""
+        "text":"Director's Desk: Prof.S.K.Sharma" ,
+        "video": "https://drive.google.com/file/d/1ptjQgW1_8ppvizdsAaTLmLTVD5jf7ezC/view?usp=sharing"
     }
   },
   {
     "question":"About Department",
     "answer":{
-      "text":"",
-      "video":""
+      "text":"HOD's Desk: Prof.J.R.Arun Kumar",
+      "video":"https://drive.google.com/file/d/1qEH0wl7oUNcAwdOh1sDqcDbbVKrhjv9L/view?usp=sharing"
     }
   },
   {
     "question":"Editorial team",
     "answer": {
-      "text":"",
-      "image":""
+      "text":"DR.R.Anusuya",
+      "video":"https://drive.google.com/file/d/1dwABuUSZf2QKA03zAHxbgzc2ec-oCWrf/view?usp=sharing"
     }  
   },
   {
     "question":"Seminar & Workshops",
     "answer":{
       "text":"Here are the Seminar & workshops done in our college:",
-      "video":"https://drive.google.com/file/d/1qEH0wl7oUNcAwdOh1sDqcDbbVKrhjv9L/view?usp=drive_link"
+      "video":"https://drive.google.com/file/d/1Ae3fohOQzXQK7JO5mc1qdbUuj7b9PQJs/view?usp=drive_link"
     }
   },
   {
-    "question":"Hackathon Curricular Activities",
+    "question":"Hackathon Activities",
     "answer":{
-      "text":"",
-      "image":""
+      "text":"Winner of SIH 2026: Mentored by Mr.Deepak Sharma",
+      "video":"https://drive.google.com/file/d/1t25Ai69zeX5IplxZ0CLXKmgUb1s1mzET/view?usp=sharing"
     }
   },
   {
     "question":"Department Activities",
     "answer":{
-      "text":"",
-      "video":""
+      "text":"Here are the Dept. Activities conducted by the Department of C.S.E & A.I:",
+      "video":"https://drive.google.com/file/d/19BY6z14CsdqXeCXkqLRjXOvwShLXdUwD/view?usp=sharing"
     }
   },
   {
     "question":"Placement Activities",
     "answer":{
-      "text":"",
-      "video":""
+      "text":"Recruitments & Internships done by our Star Performers:",
+      "video":"https://drive.google.com/file/d/1nhlr6ViA-vYpy70chDpFyrEqNjEjQUzX/view?usp=drive_link"
     }
   },
   {
     "question":"Extra Curricular Activities",
     "answer":{
-      "text":"",
-      "image":""
+      "text":"Activities done in our college:",
+      "video":"https://drive.google.com/file/d/1qZbw8ngT82DPBvc4FA9mT72ydZS3Zuv1/view?usp=drive_link"
     }
   },
   {
     "question":"Testimonials",
     "answer":{
-      "text":"",
-      "image":""
+      "text":"Opinions given by Star performers from our college:",
+      "video":"https://drive.google.com/file/d/1Ppxf_0V0CDdzUZVg8qstoia6iHjG6-IO/view?usp=sharing"
     }
   },
   {
-    "question":"Glimps & Future Action Plans",
+    "question":"Glimpses & Future Action Plans",
     "answer":{
-      "text":"",
-      "image":""
+      "text":"Future motives of our college:",
+      "video":"https://drive.google.com/file/d/147veFP-1lXRd7rV043zlDQLhCXkPV7A8/view?usp=sharing"
     }
   }
   ]
