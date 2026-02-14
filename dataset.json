@@ -22,9 +22,9 @@
     }
   },
   {
-    "question":"Editorial team",
+    "question":"Editorial Head Message",
     "answer": {
-      "text":"DR.R.Anusuya",
+      "text":"Prof.R.Anusuya",
       "video":"https://drive.google.com/file/d/1dwABuUSZf2QKA03zAHxbgzc2ec-oCWrf/view?usp=sharing"
     }  
   },
@@ -75,6 +75,13 @@
     "answer":{
       "text":"Future motives of our college:",
       "video":"https://drive.google.com/file/d/147veFP-1lXRd7rV043zlDQLhCXkPV7A8/view?usp=sharing"
+    }
+  },
+  {
+    "question":"Editor's Team",
+    "answer":{
+      "text":"Details of editor's team are:",
+      "video":"https://youtube.com/embed/rb74wHQK3W8?feature=share"
     }
   }
   ]
